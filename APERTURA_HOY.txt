@@ -1,0 +1,44 @@
+<!--axz-cofre--><!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><title>AXIZ · ACCESO PRIVADO</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+body{background:radial-gradient(ellipse 90% 50% at 50% 0%,#12120c,#06060a 70%);
+color:#f4f4f8;font-family:Georgia,serif;min-height:100vh}
+#puerta{max-width:420px;margin:16vh auto 0;padding:0 22px;text-align:center}
+#puerta .rombo{width:54px;height:54px;border:2px solid #e0b13a;transform:rotate(45deg);
+margin:0 auto 26px;display:flex;align-items:center;justify-content:center}
+#puerta .rombo i{width:8px;height:8px;background:#e0b13a;border-radius:50%}
+#puerta h1{font-family:ui-monospace,monospace;font-size:13px;letter-spacing:5px;color:#e0b13a}
+#puerta .s{font-family:ui-monospace,monospace;font-size:8px;letter-spacing:2px;color:#8e8ea6;margin-top:10px}
+#puerta form{margin-top:30px;display:flex;gap:9px}
+#puerta input{flex:1;background:#0d0c09;border:1px solid #3a3426;border-radius:9px;color:#f4f4f8;
+font-family:ui-monospace,monospace;font-size:15px;letter-spacing:3px;padding:13px 16px;outline:none;text-align:center}
+#puerta input:focus{border-color:#e0b13a}
+#puerta button{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:2px;background:#e0b13a;
+color:#0a0805;border:none;border-radius:9px;padding:0 20px;cursor:pointer;font-weight:700}
+#aviso{font-family:ui-monospace,monospace;font-size:9px;letter-spacing:1px;color:#e06050;margin-top:14px;min-height:14px}
+#puerta .pie{font-family:ui-monospace,monospace;font-size:7px;letter-spacing:1.5px;color:#5a5648;margin-top:34px;line-height:1.8}
+</style></head><body>
+<div id="puerta"><div class="rombo"><i></i></div>
+<h1>AXIZ</h1><div class="s">INTELLIGENCE HOLDINGS · ACCESO PRIVADO</div>
+<form id="f"><input id="clave" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="current-password"><button>ENTRAR</button></form>
+<div id="aviso"></div>
+<div class="pie">MATERIAL CIFRADO (AES-256) · SE ABRE SOLO EN SU NAVEGADOR<br>
+AN&Aacute;LISIS, NO ASESORAMIENTO · 2026-08-03</div></div>
+<script>
+var SAL='cYMH87+RJVEJpkDYeNfjNw==',NONCE='4Bc4Arc2jhzQXphC',COFRE='0tsufyYmmeEnC+wQiFH0fqVvYDwOemOLhCj3674L95/hJhusJosWGpiq9zoP6yzRbAipWFvsoosKRfmsrQVbUT3TqlCmkE3xyL4wnnSVMgGRZlB3IB4zNHashV5ko5h2q6eyxaq0RvsW7AGys7khxSv+Gq5VQKhIu2SRW6LmsTYlGnD7a0D0hJkeKfF6+SQMi4pqwRhpc/7sxH+9fh7ZqOQ2PgRQXMNV8aFUkpfA1qC3YUh0N26qNxIammjS9HZUiMsoPyMnzuh07ZrSr4o7HO3NR5x6vqgiTIpL3lyzZPx3soM8TxLK0NGy/31dzLQcfM3q27lcnFznNU9NrFNQTiKhpxEgnRt3yCNV/3+q20UsbjL3TSoUlkQnJ1rELUjhYMD9HOr1ztZDkLHxKSo0sSveGOa4WWD2JtxmjKPwNm8skAZuugfOj/COn21PMT7wSoMFTQ5QHtF/7K+WT+WGg84W3difDfTy8Hm0biXrvonTKolfat/5YxHcQf4wqlFOGyrWcxLtawfNlwjiHzS3SOSZ/v0Nd3nxrCi1uAbXW3UeZiBX5Lbc3INsvXYkiV8Y6na8oLsToJL8kYW4iX+ctV1Pk2XlXPkf/tsrnYZXSG5vnvNPBzxXePbVfpu0T/U22BGDPkHwqQNzl/baTkXpiJiY2u6txHIOkpq1nN7V16JemGiVMbXDJqtlZWuQhFzCyxdihXDyR+/KcI0j7m+DtA0yyuUDcqTVN5RaUiPtCtnCY0MEWD8/zXMavJTlEPCAP0KE0QrExnLSeQer3vCOxsTsKN9dVsuieLGqkQgtjjuyK6B1yh5sV+IoD1PoxfbgmtoWdNI+eyOUiLwxzkgGxF9SHIiXGEfD4I07l2gMIMode6+EN+E6ISxe8Q8dlSLtJsk6w3Y2RRl5CQ+/vXeCnPxX4GpdWXp9Wm9CfLTrTV0j8+GL22Or6sdzaLJP7N/hdI+pKI/Lb77GDWktdm3rbiMFwX5ItBdwew4llkXpiY2F8bIWa+AJiv9zRbwCJx80r6U0hVNvpuo2eWeDM4J5UgIDy6EfxfJVH4wYSk0G0D71uKgLhh0DLuWa14vwIZMTqTb1cC+OvPU2+33TRCJwj9ixWYdve66nz6aB6JlGxzNKpx8tD8yNai177ZQYbHLXtMpaforA8E6Y9W0rsp4fKc77Qmmg1QDOFD5nmsQ9yYF+6LZ+iY9EOAz+d/U/NSegU0V9/dH5bVVfZOeCsF9iyts2YEBpXy7Y9Qwsgnl0s5IA6bjuM9CI49SEM3o40b5oo5F7jlyxdLXt9en3SeMMd5BbAmwpuSDYU0w+LZxU/1H3qRc1mcD6UpN2HJ/S2uJqOisMr+lUKeijeZOIpFunByU23mXfh47Rs/vZqyRB9VDr8XUHCXT/D/8EAqgJ59aiURM1uWRQ/6cvzmmc1gmY7O6f5fKIkh4w18GIdPhUTaNVL1EoEYo3Pre5kGYLMfqcLno1Fe+40ZEd48RBFEQwawjgw6e76G3Ev5KGofYHNYzN7zNmyOSVt8lyNjwVSZXd7sjwmHdnT+BRJufu3+2/ZLAggIA8gAxgs6Q0a1HmDUgk63IBAPcqOo+Z6qGe4/clUIyXlM968Glh6ghaKsu6pEMJqDovzgpE13x0d5EnychM7A==',VUELTAS=200000;
+function b64a(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
+function intenta(clave,silencio){
+var enc=new TextEncoder();
+return crypto.subtle.importKey('raw',enc.encode(clave),'PBKDF2',false,['deriveKey'])
+.then(function(k){return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64a(SAL),iterations:VUELTAS,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt']);})
+.then(function(llave){return crypto.subtle.decrypt({name:'AES-GCM',iv:b64a(NONCE)},llave,b64a(COFRE));})
+.then(function(plano){try{sessionStorage.setItem('axz_clave',clave);}catch(e){}
+var h=new TextDecoder().decode(plano);document.open();document.write(h);document.close();})
+.catch(function(){try{sessionStorage.removeItem('axz_clave');}catch(e){}
+if(!silencio){document.getElementById('aviso').textContent='CLAVE INCORRECTA';}});}
+document.getElementById('f').addEventListener('submit',function(ev){ev.preventDefault();
+var c=document.getElementById('clave').value;if(!c)return;
+document.getElementById('aviso').textContent='ABRIENDO\u2026';intenta(c,false);});
+try{var g=sessionStorage.getItem('axz_clave');if(g){intenta(g,true);}}catch(e){}
+</script></body></html>
