@@ -26,7 +26,7 @@ color:#0a0805;border:none;border-radius:9px;padding:0 20px;cursor:pointer;font-w
 <div class="pie">MATERIAL CIFRADO (AES-256) · SE ABRE SOLO EN SU NAVEGADOR<br>
 AN&Aacute;LISIS, NO ASESORAMIENTO · 2026-08-03</div></div>
 <script>
-var SAL='Z704FTMgmDTJCUrLfBypkA==',NONCE='ogqHJocoAh0STRqa',COFRE='xUpv5qmFM+GbZAbY4thL3Dd63SjBtdjiC0Kz+M3M77xNg56F0cukx5BjLxwqkPFdaFJ8jZpst2flauqB2/L4IWl47B3YDIi8p/5M9uOJvBGtS1zYgcKLlhvs1I+m49Ly7pMqDMI4YrKqHrgLNy62TPRIwxf5yz+y7i9OcVOmqqKfVaibpEDWrT8ilqQTt8UcozZaCP4RsElt29IZj05Sb9LzscUeR1/LZPeaeCdzwFQdc8DVLB28YFSxRFQJsMNDfqNBnOfxC5j360Mam7FtygPquBJy4sonbZoRZOBQRgCqJBqVTj3X0erqa3SEfQXa5qQU49Npv8CiIkYXjdBFDsk/b2fkDP2ZR8pbdroSaqLWqXoLdYyLhJGMic7WSRE4jtLeT3C309+Piwny56wIav6VKNi7VjAKaOXkmh28jnZ7vykWMwSshbntF6mMggEpsDV+',VUELTAS=200000;
+var SAL='TrJEGR7mvZ/2n7kEg40Weg==',NONCE='YoqwQ9Jl7lC0NS5a',COFRE='FukbLrtHPK4WtqKIqojsNJgGI9WHtbbPcRWSqA+Qqr6AyJZ8vY5yB9/23JzIzKZo2dwNNYUryFO4lHroeZ5rR7TiYKXhwqr1b5ISsEzmzdrCHlGvpEwcbyysmmB0uf1z9Gwzcrit9o0SzE8Eel43PKVmDAyNElFwsS1JC1roGJMtnuSsne8BFo8CNpyuIPal3AIPEEwGL0aeaxAGt1xg9lT4/APFDVhmprd6QivoW27KYPZMtmuxY3Q0MJVWAukv/RXDX+j2K8qNW6ee4SV2uD3fyTMHHRxpfphiJei90ljZPeKmc2j0mEWMeBDOWeQ0Sfyg1ilnAxo3FpHnR0sZEtHcFzaOesZmmMPE3m0rOdoWMdN9xjoY4N/7b3R/LMCBEWtmvciOaXxqmeXL+RAM2UM1EacxSKC6c2qdyeo4YMIyylfTfo1vmN7O2h9w9plAY+UM',VUELTAS=200000;
 function b64a(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
 function intenta(clave,silencio){
 var enc=new TextEncoder();
@@ -36,9 +36,11 @@ return crypto.subtle.importKey('raw',enc.encode(clave),'PBKDF2',false,['deriveKe
 .then(function(plano){try{sessionStorage.setItem('axz_clave',clave);}catch(e){}
 var h=new TextDecoder().decode(plano);document.open();document.write(h);document.close();})
 .catch(function(){try{sessionStorage.removeItem('axz_clave');}catch(e){}
+document.getElementById('puerta').style.visibility='';
 if(!silencio){document.getElementById('aviso').textContent='CLAVE INCORRECTA';}});}
 document.getElementById('f').addEventListener('submit',function(ev){ev.preventDefault();
 var c=document.getElementById('clave').value;if(!c)return;
 document.getElementById('aviso').textContent='ABRIENDO\u2026';intenta(c,false);});
-try{var g=sessionStorage.getItem('axz_clave');if(g){intenta(g,true);}}catch(e){}
+try{var g=sessionStorage.getItem('axz_clave');if(g){
+document.getElementById('puerta').style.visibility='hidden';intenta(g,true);}}catch(e){}
 </script></body></html>
