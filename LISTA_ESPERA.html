@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AXIZ SENTINEL · Lista de espera</title>
+<style>
+:root{--bg:#06060a;--panel:#13131c;--line:#2e2e42;--ink:#f4f4f8;--mut:#c2c2d4;--dim:#8e8ea6;--gold:#e8bd4a;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+.card{max-width:560px;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:40px 32px;}
+.eyebrow{font-family:'DejaVu Sans Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;}
+h1{font-size:28px;margin:14px 0 6px;color:var(--ink);}
+p.lead{color:var(--mut);line-height:1.7;font-size:15px;margin:0 0 28px;}
+label{display:block;font-family:'DejaVu Sans Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--dim);margin:18px 0 6px;text-transform:uppercase;}
+input[type=text],input[type=email]{width:100%;background:#0a0a12;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:12px 14px;font-size:15px;font-family:Georgia,serif;}
+input[type=text]:focus,input[type=email]:focus{outline:none;border-color:var(--gold);}
+.niveles{display:grid;gap:10px;margin-top:8px;}
+.nivel{display:flex;align-items:flex-start;gap:10px;background:#0a0a12;border:1px solid var(--line);border-radius:8px;padding:12px 14px;cursor:pointer;}
+.nivel:has(input:checked){border-color:var(--gold);background:rgba(232,189,74,.08);}
+.nivel input{margin-top:3px;}
+.nivel b{font-size:14px;color:var(--ink);}
+.nivel span{display:block;font-size:12px;color:var(--dim);margin-top:2px;}
+.consent{display:flex;align-items:flex-start;gap:10px;margin-top:22px;font-size:12px;color:var(--dim);line-height:1.6;}
+.consent input{margin-top:3px;}
+button{margin-top:26px;width:100%;background:var(--gold);color:#0a0805;border:none;border-radius:8px;padding:15px;font-size:14px;font-weight:700;letter-spacing:1px;font-family:'DejaVu Sans Mono',monospace;cursor:pointer;}
+button:hover{background:#f2cc60;}
+button:disabled{opacity:.5;cursor:not-allowed;}
+.nota{margin-top:16px;font-size:12px;color:var(--dim);line-height:1.6;}
+.ok{display:none;text-align:center;padding:20px 0;}
+.ok.show{display:block;}
+.ok h2{color:var(--gold);font-size:20px;}
+.ok p{color:var(--mut);font-size:14px;line-height:1.7;}
+#f.hidden{display:none;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">AXIZ · SENTINEL INTELLIGENCE HOLDINGS</div>
+  <h1>Lista de espera</h1>
+  <p class="lead">Deja tus datos y te avisamos en cuanto abramos las suscripciones. Sin cobro ahora — esto es solo para reservar tu sitio y saber a cuántos avisar.</p>
+
+  <form id="f">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" required autocomplete="name">
+
+    <label for="email">Correo</label>
+    <input type="email" id="email" required autocomplete="email">
+
+    <label>Qué nivel te interesa</label>
+    <div class="niveles">
+      <label class="nivel"><input type="radio" name="nivel" value="Básico (30€/mes)" checked><span><b>SENTINEL · Básico</b><span>Las 4 casas, informes diarios, marcador oficial — 30€/mes</span></span></label>
+      <label class="nivel"><input type="radio" name="nivel" value="Premium (45-60€/mes)"><span><b>PREMIUM</b><span>+ 34 divisiones, históricos, cronoscopio — 45-60€/mes</span></span></label>
+      <label class="nivel"><input type="radio" name="nivel" value="El Despacho (120-180€/mes)"><span><b>EL DESPACHO</b><span>+ cierre en directo, panel, chat en vivo — 120-180€/mes</span></span></label>
+      <label class="nivel"><input type="radio" name="nivel" value="No lo tengo claro todavía"><span><b>No lo tengo claro</b><span>Avisadme y decido cuando abráis</span></span></label>
+    </div>
+
+    <label class="consent"><input type="checkbox" id="consiente" required> Acepto que AXIZ me contacte por correo sobre esta lista de espera. No se comparte con nadie más ni se usa para nada distinto de avisarte.</label>
+
+    <button type="submit">APUNTARME</button>
+    <div class="nota">Al enviar se abrirá tu programa de correo con un mensaje ya escrito — solo tienes que darle a enviar.</div>
+  </form>
+
+  <div class="ok" id="ok">
+    <h2>&#10003; Casi listo</h2>
+    <p>Se ha abierto tu correo con los datos ya escritos. Dale a enviar y quedas apuntado — te avisamos en cuanto abramos.</p>
+  </div>
+</div>
+<script>
+document.getElementById('f').addEventListener('submit', function(e){
+  e.preventDefault();
+  var nombre = document.getElementById('nombre').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var nivel = document.querySelector('input[name="nivel"]:checked').value;
+  var asunto = 'Lista de espera AXIZ - ' + nombre;
+  var cuerpo = 'Nombre: ' + nombre + '\nCorreo: ' + email + '\nNivel de interes: ' + nivel + '\n\nAcepto que me contacteis por correo sobre esto.';
+  var mailto = 'mailto:ferreirogareaadrian@gmail.com?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+  window.location.href = mailto;
+  document.getElementById('f').classList.add('hidden');
+  document.getElementById('ok').classList.add('show');
+});
+</script>
+</body>
+</html>
